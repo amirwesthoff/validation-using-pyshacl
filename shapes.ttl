@@ -1,0 +1,15 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ConsumerShape
+    a sh:NodeShape ;
+    sh:targetClass :Consumer ;
+    sh:property [
+        sh:path :hasGender ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class :Gender ;
+        sh:in (:Male :Female :Unknown)
+    ] ;
+.

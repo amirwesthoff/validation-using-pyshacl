@@ -1,0 +1,20 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:Gender
+    a owl:Class .
+
+:Male
+    a :Gender ;
+    a owl:NamedIndividual . # apparently this statement is needed to be included, see also: https://github.com/RDFLib/pySHACL/issues/187
+
+:Female
+    a :Gender ;
+    a owl:NamedIndividual . # apparently this statement is needed to be included, see also: https://github.com/RDFLib/pySHACL/issues/187
+
+:Unknown
+    a :Gender ;
+    a owl:NamedIndividual . # apparently this statement is needed to be included, see also: https://github.com/RDFLib/pySHACL/issues/187
